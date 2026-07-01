@@ -1,0 +1,25 @@
+{
+  "name": "custom-heading-renderer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "rspack dev",
+    "build": "rspack build",
+    "start": "serve ./dist -p 8081"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@module-federation/runtime-tools": "^2.6.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@rspack/cli": "2.0.5",
+    "@rspack/core": "2.0.5",
+    "@rspack/dev-server": "2.0.3",
+    "@rspack/plugin-react-refresh": "^2.0.1",
+    "html-webpack-plugin": "^5.6.7",
+    "react-refresh": "^0.18.0",
+    "serve": "14.2.6"
+  }
+}
