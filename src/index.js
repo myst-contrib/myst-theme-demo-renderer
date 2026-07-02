@@ -1,14 +1,16 @@
-const Component = ({ node }) => {
+import { MyST } from "myst-to-react";
+
+const BlueBorderDiv = ({ node }) => {
   return (
     <div style={{ border: "5px solid darkblue" }}>
-      <p>I'm a Component exposed from container B!</p>
+      <MyST ast={node.children} />
     </div>
   );
 };
 
 const renderers = {
   div: {
-    "div[class=custom]": Component,
+    "div[class=blue-border]": BlueBorderDiv,
   },
 };
 
