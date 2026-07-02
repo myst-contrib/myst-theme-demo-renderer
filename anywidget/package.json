@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "rspack dev",
     "build": "rspack build",
-    "start": "serve ./dist -p 8081"
+    "start": "serve ./dist -p 9000"
   },
   "license": "MIT",
   "dependencies": {

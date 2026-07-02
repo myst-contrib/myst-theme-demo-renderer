@@ -5,6 +5,6 @@
   "license": "MIT",
   "scripts": {
     "build": "pnpm --filter \"@mf-demo/*\" build",
-    "dev": "pnpm --filter \"@mf-demo/*\" dev"
+    "start": "pnpm --filter \"@mf-demo/*\" start"
   }
 }
