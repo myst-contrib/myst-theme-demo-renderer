@@ -1,5 +1,5 @@
 {
-  "name": "custom-heading-renderer",
+  "name": "@mf-demo/anywidget",
   "version": "1.0.0",
   "private": true,
   "scripts": {

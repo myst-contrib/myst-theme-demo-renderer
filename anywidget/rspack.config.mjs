@@ -31,7 +31,7 @@ export default defineConfig({
   context: import.meta.dirname,
   output: {
     // set uniqueName explicitly to make react-refresh works
-    uniqueName: "custom_anywidget_renderer",
+    uniqueName: "mf_demo_anywidget",
   },
   module: {
     rules: [
@@ -58,11 +58,11 @@ export default defineConfig({
   plugins: [
     new HtmlWebpackPlugin({
       // exclude container entry from html, to use the correct HMR handler
-      excludeChunks: ["custom_anywidget_renderer"],
+      excludeChunks: ["mf_demo_anywidget"],
     }),
     new rspack.container.ModuleFederationPlugin({
       // A unique name
-      name: "custom_anywidget_renderer",
+      name: "mf_demo_anywidget",
       // List of exposed modules
       exposes: {
         ".": "./src/index",

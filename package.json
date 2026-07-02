@@ -1,0 +1,10 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm --filter \"@mf-demo/*\" build",
+    "dev": "pnpm --filter \"@mf-demo/*\" dev"
+  }
+}

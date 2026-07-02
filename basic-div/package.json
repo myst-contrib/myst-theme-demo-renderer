@@ -1,5 +1,5 @@
 {
-  "name": "basic-div-extension",
+  "name": "@mf-demo/basic-div",
   "version": "1.0.0",
   "private": true,
   "scripts": {
