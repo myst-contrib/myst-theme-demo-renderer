@@ -7,6 +7,23 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const isProduction = process.env.NODE_ENV === "production";
 
+const themeSharedPackages = [
+  "@myst-theme/anywidget",
+  "@myst-theme/common",
+  "@myst-theme/diagrams",
+  "@myst-theme/frontmatter",
+  "@myst-theme/icons",
+  "@myst-theme/jupyter",
+  "@myst-theme/landing-pages",
+  "myst-demo",
+  "myst-to-react",
+  "@myst-theme/providers",
+  "@myst-theme/search-minisearch",
+  "@myst-theme/search",
+  "@myst-theme/site",
+  "react",
+];
+
 /** @type {import('@rspack/core').Configuration} */
 
 export default defineConfig({
@@ -52,13 +69,9 @@ export default defineConfig({
       },
 
       // list of shared modules
-      shared: [
-        {
-          react: {
-            singleton: true, // must be specified in each config
-          },
-        },
-      ],
+      shared: themeSharedPackages.map((pkg) => {
+        return { [pkg]: { import: false, singleton: true } };
+      }),
     }),
     !isProduction && new ReactRefreshRspackPlugin(),
   ],
