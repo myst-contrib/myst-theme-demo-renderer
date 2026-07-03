@@ -2,6 +2,7 @@
   "name": "@mf-demo/anywidget",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "rspack dev",
     "build": "rspack build",

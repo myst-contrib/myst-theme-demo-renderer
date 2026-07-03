@@ -8,5 +8,7 @@ This project uses Module Federation 1.5 to build a module that can be imported b
 ## Demo
 
 1. Build this repo with `pnpm run build`
-2. Serve the contents of `dist` under port `9000`
-3. Use a patched version of the book theme, and run it against the content served from `content`.
+2. Serve the contents of `*/dist` with `pnm run start`
+3. Start a patched version of the book theme
+4. Start a headless content server in `demo`
+5. Patch `demo/_build/site/config.json` with a top-level `remotes` key from `demo/README.md`

@@ -7,23 +7,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const themeSharedPackages = [
-  "@myst-theme/anywidget",
-  "@myst-theme/common",
-  "@myst-theme/diagrams",
-  "@myst-theme/frontmatter",
-  "@myst-theme/icons",
-  "@myst-theme/jupyter",
-  "@myst-theme/landing-pages",
-  "myst-demo",
-  "myst-to-react",
-  "@myst-theme/providers",
-  "@myst-theme/search-minisearch",
-  "@myst-theme/search",
-  "@myst-theme/site",
-  "react",
-];
-
 /** @type {import('@rspack/core').Configuration} */
 
 export default defineConfig({
@@ -69,9 +52,84 @@ export default defineConfig({
       },
 
       // list of shared modules
-      shared: themeSharedPackages.map((pkg) => {
-        return { [pkg]: { import: false, singleton: true } };
-      }),
+      shared: {
+        "@heroicons/react": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/anywidget": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/common": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/frontmatter": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/icons": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/jupyter": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/landing-pages": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/providers": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/search": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/search-minisearch": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/site": {
+          singleton: true,
+          import: false,
+        },
+        "@myst-theme/styles": {
+          singleton: true,
+          import: false,
+        },
+        "myst-spec-ext": {
+          singleton: true,
+          import: false,
+        },
+        "myst-to-react": {
+          singleton: true,
+          import: false,
+        },
+        "myst-common": {
+          singleton: true,
+          import: false,
+        },
+        "myst-config": {
+          singleton: true,
+          import: false,
+        },
+        "myst-migrate": {
+          singleton: true,
+          import: false,
+        },
+        "thebe-core": {
+          singleton: true,
+          import: false,
+        },
+        react: {
+          singleton: true,
+          import: false,
+        },
+      },
     }),
     !isProduction && new ReactRefreshRspackPlugin(),
   ],
