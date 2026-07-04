@@ -55,10 +55,6 @@ export default defineConfig({
       // generated from book thrmr package.json via
       // jq '.dependencies | to_entries | map({key: .key, value: {singleton:true,import:false}}) | from_entries' package.json | wl-copy
       shared: {
-        "@heroicons/react": {
-          singleton: true,
-          import: false,
-        },
         "@myst-theme/anywidget": {
           singleton: true,
           import: false,

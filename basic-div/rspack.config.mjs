@@ -53,10 +53,6 @@ export default defineConfig({
 
       // list of shared modules
       shared: {
-        "@heroicons/react": {
-          singleton: true,
-          import: false,
-        },
         "@myst-theme/anywidget": {
           singleton: true,
           import: false,
