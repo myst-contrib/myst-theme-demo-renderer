@@ -14,4 +14,8 @@ const renderers = {
   },
 };
 
-export default renderers;
+const extension = {
+  renderers,
+};
+
+export default extension;
